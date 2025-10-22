@@ -108,7 +108,7 @@ jobs:
       # in which case we are declaring one specific tox environment to run.
       # see tox.ini for more
       - name: Test with tox
-        uses: aganders3/headless-gui@v1
+        uses: aganders3/headless-gui@v2
         with:
           run: python -m tox
         env:
@@ -163,7 +163,7 @@ jobs:
           PIP_CONSTRAINT: napari-from-github/resources/constraints/constraints_py3.9.txt
 
       - name: Test
-        uses: aganders3/headless-gui@v1
+        uses: aganders3/headless-gui@v2
         with:
           run: python -m pytest --pyargs napari --color=yes
 
@@ -183,7 +183,7 @@ jobs:
           pip install setuptools tox tox-gh-actions
 
       - name: Test
-        uses: aganders3/headless-gui@v1
+        uses: aganders3/headless-gui@v2
         with:
           run: tox -e py39-linux-pyside2-examples
         env:
