@@ -153,7 +153,7 @@ jobs:
           MIN_REQ: ${{ matrix.MIN_REQ }}
           FORCE_COLOR: 1
           PIP_CONSTRAINT: resources/constraints/constraints_py${{ matrix.python }}${{ matrix.MIN_REQ && '_min_req' }}.txt
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: upload pytest timing reports as json
           path: |
